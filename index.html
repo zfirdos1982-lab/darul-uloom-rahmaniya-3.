@@ -1,63 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دارالعلوم رحمانی ڈومریا</title>
+<title>دارالعلوم رحمانیہ | Darul Uloom Rahmaniya</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f7f2;color:#24352b;line-height:1.9}
-header{background:#075b43;color:white;text-align:center;padding:35px 15px}
-header h1{font-size:30px;margin:0}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f8f3;color:#24352b;line-height:1.9}
+header{background:#075b3b;color:white;text-align:center;padding:35px 15px}
+header h1{font-size:34px;margin:5px}
 header p{margin:5px}
-nav{background:#064532;text-align:center;padding:12px}
-nav a{color:white;text-decoration:none;margin:8px;font-size:15px}
-.hero{text-align:center;padding:55px 15px;background:#e3f0e7}
-.hero h2{color:#075b43;font-size:27px}
-section{max-width:950px;margin:25px auto;padding:25px;background:white;border-radius:12px}
-h2{color:#075b43}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.card{background:#edf5ef;padding:18px;border-radius:10px;text-align:center}
-footer{background:#064532;color:white;text-align:center;padding:22px}
+nav{background:#06452f;text-align:center;padding:12px}
+nav a{color:white;text-decoration:none;margin:8px;display:inline-block}
+button{background:#d6b45c;border:0;padding:10px 22px;border-radius:7px;cursor:pointer;font-size:16px}
+.hero{text-align:center;padding:45px 18px;background:linear-gradient(135deg,#e5f0e8,#fff7df)}
+.hero h2{color:#075b3b;font-size:27px}
+.building{font-size:65px;color:#b18b37;margin:15px}
+section{max-width:950px;margin:25px auto;padding:25px;background:white;border-radius:12px;box-shadow:0 2px 12px #00000010}
+h2{color:#08613f}
+.notice{background:#fff4d9;border-right:5px solid #c49b3d;padding:15px;border-radius:7px}
+ul{padding-right:25px}
+footer{background:#06452f;color:white;text-align:center;padding:25px}
+.en{display:none;direction:ltr;text-align:left}
+body.english .ur{display:none}
+body.english .en{display:block}
+body.english{direction:ltr}
+body.english ul{padding-left:25px;padding-right:0}
+body.english .notice{border-right:0;border-left:5px solid #c49b3d}
+@media(max-width:600px){header h1{font-size:27px}section{margin:15px;padding:18px}}
 </style>
 </head>
 <body>
+
 <header>
-<h1>دارالعلوم رحمانی ڈومریا</h1>
-<p>رانی گنج، ضلع ارریہ، بہار</p>
-<p>تعلیم و تربیت کا ایک دینی و علمی مرکز</p>
+  <div class="ur">
+    <h1>دارالعلوم رحمانیہ</h1>
+    <p>ڈومریا، رانی گنج، ضلع ارریہ، بہار</p>
+    <p>قرآن و سنت کی روشنی میں دینی و عصری تعلیم کا عزم</p>
+  </div>
+  <div class="en">
+    <h1>Darul Uloom Rahmaniya</h1>
+    <p>Domariya, Raniganj, Araria District, Bihar, India</p>
+    <p>A Vision for Religious and Modern Education</p>
+  </div>
+  <button onclick="changeLanguage()">اردو / English</button>
 </header>
+
 <nav>
-<a href="#home">صفحۂ اول</a>
-<a href="#about">تعارف</a>
-<a href="#departments">شعبہ جات</a>
-<a href="#contact">رابطہ</a>
+  <a href="#about"><span class="ur">تعارف</span><span class="en">About</span></a>
+  <a href="#vision"><span class="ur">ہمارے عزائم</span><span class="en">Our Vision</span></a>
+  <a href="#projects"><span class="ur">منصوبے</span><span class="en">Projects</span></a>
+  <a href="#needs"><span class="ur">ضروریات</span><span class="en">Needs</span></a>
+  <a href="#contact"><span class="ur">رابطہ</span><span class="en">Contact</span></a>
 </nav>
-<div class="hero" id="home">
-<h2>بسم اللہ الرحمن الرحیم</h2>
-<h2>خوش آمدید!</h2>
-<p>دارالعلوم رحمانی ڈومریا کی سرکاری ویب سائٹ میں آپ کا خیر مقدم ہے۔</p>
+
+<div class="hero">
+  <div class="building">🕌</div>
+  <div class="ur">
+    <h2>بسم اللہ الرحمن الرحیم</h2>
+    <h2>علم، ایمان اور کردار کی تعمیر</h2>
+    <p>ایک دینی و تعلیمی ادارے کے قیام کی مخلصانہ کوشش</p>
+  </div>
+  <div class="en">
+    <h2>In the Name of Allah, the Most Merciful</h2>
+    <h2>Building Knowledge, Faith and Character</h2>
+    <p>A sincere initiative to establish an Islamic educational institution</p>
+  </div>
 </div>
+
 <section id="about">
-<h2>ہمارا تعارف</h2>
-<p>دارالعلوم رحمانی ڈومریا ایک دینی و تعلیمی ادارہ ہے۔ ہمارا مقصد قرآن و سنت کی تعلیم، دینی تربیت اور نئی نسل کی اصلاح و رہنمائی ہے۔</p>
+  <div class="ur">
+    <h2>تعارفِ ادارہ</h2>
+    <p>دارالعلوم رحمانیہ ڈومریا، رانی گنج، ضلع ارریہ، بہار میں ایک دینی و تعلیمی ادارہ قائم کرنے کا مجوزہ منصوبہ ہے۔ اس ادارے کا مقصد نئی نسل کو قرآن و سنت کی تعلیم، اسلامی اخلاق اور مفید علمی تربیت فراہم کرنا ہے۔</p>
+    <div class="notice">اہم وضاحت: یہ ادارہ فی الحال قیام اور منصوبہ بندی کے مرحلے میں ہے۔ ابھی عمارت یا تعلیمی شعبے قائم نہیں ہوئے ہیں۔</div>
+  </div>
+  <div class="en">
+    <h2>About the Institution</h2>
+    <p>Darul Uloom Rahmaniya is a proposed Islamic educational institution planned for Domariya, Raniganj, Araria District, Bihar. Its aim is to provide the coming generation with education based on the Quran and Sunnah, Islamic values and beneficial knowledge.</p>
+    <div class="notice">Important Note: The institution is currently at the planning stage. Its building and educational departments have not yet been established.</div>
+  </div>
 </section>
-<section id="departments">
-<h2>ہمارے شعبہ جات</h2>
-<div class="cards">
-<div class="card"><h3>شعبۂ حفظ القرآن</h3><p>قرآن کریم حفظ کرنے کی تعلیم</p></div>
-<div class="card"><h3>شعبۂ ناظرہ</h3><p>قرآن کریم کی درست تلاوت</p></div>
-<div class="card"><h3>شعبۂ دینیات</h3><p>بنیادی دینی تعلیم و تربیت</p></div>
-</div>
+
+<section id="vision">
+  <div class="ur">
+    <h2>ہمارے عزائم</h2>
+    <ul>
+      <li>قرآن کریم اور احادیث نبویہ کی تعلیم کو عام کرنا۔</li>
+      <li>طلبہ کی دینی، اخلاقی اور علمی تربیت کرنا۔</li>
+      <li>اسلامی تعلیم کے ساتھ مفید عصری علوم کی راہ ہموار کرنا۔</li>
+      <li>معاشرے میں علم، اخوت اور خدمتِ خلق کا جذبہ پیدا کرنا۔</li>
+    </ul>
+  </div>
+  <div class="en">
+    <h2>Our Vision</h2>
+    <ul>
+      <li>To spread the teachings of the Holy Quran and Hadith.</li>
+      <li>To develop students' religious, moral and intellectual character.</li>
+      <li>To create opportunities for beneficial modern education alongside Islamic studies.</li>
+      <li>To promote knowledge, brotherhood and service to humanity.</li>
+    </ul>
+  </div>
 </section>
+
+<section id="projects">
+  <div class="ur">
+    <h2>ہمارے مجوزہ منصوبے</h2>
+    <ul>
+      <li>ادارے کے لیے مناسب زمین کا انتظام۔</li>
+      <li>تعلیمی عمارت کی تعمیر۔</li>
+      <li>مسجد یا نماز کی جگہ کا قیام۔</li>
+      <li>کتب خانہ اور مطالعے کی سہولت۔</li>
+      <li>طلبہ کے لیے رہائش کا انتظام۔</li>
+      <li>مستقبل میں مختلف تعلیمی شعبوں کا آغاز۔</li>
+    </ul>
+  </div>
+  <div class="en">
+    <h2>Proposed Projects</h2>
+    <ul>
+      <li>Arranging suitable land for the institution.</li>
+      <li>Construction of an educational building.</li>
+      <li>Establishing a mosque or prayer space.</li>
+      <li>Creating a library and reading facilities.</li>
+      <li>Arranging accommodation for students.</li>
+      <li>Starting different educational departments in the future.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="needs">
+  <div class="ur">
+    <h2>ادارے کی بنیادی ضروریات</h2>
+    <p>اس تعلیمی منصوبے کو عملی شکل دینے کے لیے زمین، تعمیرات، تعلیمی وسائل، کتابوں اور دیگر ضروری سامان کی ضرورت ہوگی۔ اہلِ خیر حضرات کی دعاؤں، مشوروں اور تعاون سے یہ نیک مقصد آگے بڑھ سکتا ہے۔</p>
+  </div>
+  <div class="en">
+    <h2>Initial Needs</h2>
+    <p>To turn this educational vision into reality, the project will need land, construction resources, educational materials, books and other essential facilities. The prayers, guidance and support of well-wishers can help this noble effort move forward.</p>
+  </div>
+</section>
+
 <section id="contact">
-<h2>رابطہ اور پتہ</h2>
-<p>دارالعلوم رحمانی ڈومریا، رانی گنج، ضلع ارریہ، بہار، ہندوستان</p>
-<p>رابطہ نمبر: جلد درج کیا جائے گا۔</p>
+  <div class="ur">
+    <h2>رابطہ و تعاون</h2>
+    <p>پتہ: ڈومریا، رانی گنج، ضلع ارریہ، بہار، ہندوستان</p>
+    <p>ادارے کے قیام اور تعاون سے متعلق معلومات کے لیے مزید رابطے کی تفصیلات بعد میں یہاں شامل کی جائیں گی۔</p>
+  </div>
+  <div class="en">
+    <h2>Contact and Support</h2>
+    <p>Address: Domariya, Raniganj, Araria District, Bihar, India.</p>
+    <p>Further contact details regarding the institution and its support will be added here later.</p>
+  </div>
 </section>
+
 <footer>
-<p>دارالعلوم رحمانی ڈومریا</p>
-<p>اللہ تعالیٰ اس ادارے کو دن دوگنی رات چوگنی ترقی عطا فرمائے۔ آمین</p>
+  <div class="ur">دارالعلوم رحمانیہ — علم و عمل کی ایک نئی امید</div>
+  <div class="en">Darul Uloom Rahmaniya — A New Hope for Knowledge and Action</div>
+  <p>© Darul Uloom Rahmaniya</p>
 </footer>
+
+<script>
+function changeLanguage(){
+  document.body.classList.toggle("english");
+}
+</script>
+
 </body>
 </html>
